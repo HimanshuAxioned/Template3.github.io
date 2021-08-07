@@ -60,7 +60,7 @@ a{
 
 h2{
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 1.6em;
 }
 
 
@@ -181,4 +181,43 @@ nav a{
 	100%{
 		transition: translateX(0%)
 	}	
+}
+
+/*section business-theme*/
+
+.business-theme h2{
+	padding: 25px 0;
+	position: relative;
+}
+
+.business-theme h2::after{
+	content:"-------";
+	color: lightgray;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+
+}
+
+.business-theme span{
+	color: rgb(160, 198, 63) ;
+}
+
+.business-theme ul{
+	display: flex;
+	justify-content: space-between;
+	text-align:center;
+}
+
+.business-theme a{
+	border: 5% solid grey;
+	border-radius: 50%;
+
+}
+
+.business-theme h3{
+	text-transform: uppercase;
+	font-size: 1.6em;
+	
 }
