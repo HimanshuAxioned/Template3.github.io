@@ -47,7 +47,22 @@ table {
 	border-spacing: 0;
 }
 
-/*link */
+
+/*font*/
+html{
+	font-family: sans-serif;
+}
+/*links */
+
+a{
+	text-decoration: none;
+}
+
+h2{
+	text-transform: uppercase;
+}
+
+
 
 
 /*wrapper*/
@@ -62,7 +77,9 @@ table {
 /*header*/
 
 header{
-	background-image: url(https://via.placeholder.com/);
+	background:white;
+	position: sticky;
+	z-index: 1;
 }
 
 
@@ -79,6 +96,7 @@ header div{
 
 nav ul{
 	display: flex;
+	font-size: 1em;
 }
 
 nav li{
@@ -94,5 +112,71 @@ padding-left: 30px;
 
 .nav-list li:last-child::after{
 	font-family: "Font Awesome 4 Free";
-  content:"" ;
+  content: url(https://fontawesome.com/v4.7/icon/bookmark-o);
+}
+
+nav a{
+	color: black;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+}
+
+/*banner*/
+
+.banner{
+	background: rgb(160, 198, 63);
+	overflow: hidden;
+	position: relative;
+}
+
+.banner .wrapper{
+	overflow: hidden;
+}
+
+.banner-slidder{
+	width: 200%;
+}
+.banner ul{
+	width:100%;
+	display: flex;
+	position: relative;
+	animation: banner-slider 3s infinite ease-in-out ;
+}
+
+.banner li{
+	box-sizing: border-box;
+	margin: 7% 0%;
+	padding-left: 25%;
+	text-align: center;
+}
+
+.banner h2{
+	display: inline-block;
+	width: 100%;
+	font-size: 1.5em;
+}
+
+.banner .left-arrow-scroll{
+	position: absolute;
+	top: 45%;
+	left: 5%;
+}
+.banner .right-arrow-scroll{
+	position: absolute;
+	top: 45%;
+	right: 5%;
+}
+
+
+
+@keyframes banner-slider{
+	0%{
+		transition: translateX(0%);
+	}
+	50%{
+		transition: translateX(-100%)
+	}
+	100%{
+		transition: translateX(0%)
+	}	
 }
