@@ -58,11 +58,34 @@ a{
 	text-decoration: none;
 }
 
+/*Headings*/
+
 h2{
 	text-transform: uppercase;
 	font-size: 1.6em;
 }
 
+h3{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	padding: 25px 0;
+}
+
+h3 span{
+	color:rgb(160, 198, 63) ;
+}
+
+h3::before{
+	content:"--";
+	color: lightgray;
+	width: 100%;
+}
+
+h3::after{
+	content:"----------------------------";
+	color: lightgray;
+	width: 100%;
+}
 
 
 
@@ -221,3 +244,29 @@ nav a{
 	font-size: 1.6em;
 	
 }
+
+.business-theme h3::before{
+	content: none;
+}
+.business-theme h3::after{
+	content: none;
+}
+
+/*section portfolio*/
+
+.portfolio ul{
+	display: flex;
+	width: 50%;
+
+}
+
+.portfolio li{
+	display: flex;
+	justify-content: space-between;
+	float: left;
+}
+
+.portfolio ul:nth-child(3){
+	clear: both;
+}
+
