@@ -87,7 +87,19 @@ h3::after{
 	width: 100%;
 }
 
+h4{
+	text-transform: uppercase;
+	font-size: 1.1em;
+	padding: 5px;
+}
 
+p::first-letter{
+	text-transform: uppercase;
+}
+
+li::first-letter{
+	text-transform: uppercase;
+}
 
 /*wrapper*/
 .wrapper{
@@ -101,7 +113,7 @@ h3::after{
 /*header*/
 
 header{
-	background:white;
+	background:whitesmoke;
 	position: sticky;
 	z-index: 1;
 }
@@ -208,6 +220,10 @@ nav a{
 
 /*section business-theme*/
 
+.business-theme{
+	background: whitesmoke;
+}
+
 .business-theme h2{
 	padding: 25px 0;
 	position: relative;
@@ -254,14 +270,19 @@ nav a{
 
 /*section portfolio*/
 
+.portfolio{
+	background: whitesmoke;
+}
+
 .portfolio ul{
 	display: flex;
-	width: 50%;
+	width: 100%;
 
 }
 
 .portfolio li{
 	display: flex;
+	width: 50%;
 	justify-content: space-between;
 	float: left;
 }
@@ -272,7 +293,9 @@ nav a{
 
 /*section advertisers*/
 
-
+.advertisers{
+	background: whitesmoke;
+}
 .advertisers ul{ 
 	width: 100%;
 	display: inline-flex;
@@ -288,4 +311,87 @@ nav a{
 	position: absolute;
 	bottom:1%;
 	right:2px;
+}
+
+/*contact*/
+
+footer{
+	background: white ;
+	margin-top: 3%;
+}
+
+.contact-content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-content div{
+	width: 25%;
+	box-sizing: border-box;
+
+}
+
+.social-icons{
+	display: flex;
+}
+
+.archives li{
+	position: relative;
+	padding: 5%;
+}
+.archives li::after{
+	content:"------------------";
+	color: lightgray;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 5%;
+}
+
+
+.contact-us a{
+	color: black;
+	padding: 5% 0;
+}
+
+.contact-form input{
+	padding: 5% 0;	
+	border: none;
+	border-bottom: 2px solid lightgray;
+}
+
+::-webkit-input-placeholder::first-letter{
+	text-transform: uppercase;
+}
+
+button{
+	margin: 5%;
+	border: 2px;
+	padding: 5% 8%;
+	color: white;
+	background:rgb(160, 198, 63) ;
+	float: right;
+}
+
+.copy-right{
+	color: white;
+	background: black;
+	padding: 1% 0;
+}
+
+.copy-right a{
+	color: white;
+}
+
+.copy-right ul{
+	display: inline-flex;
+}
+
+.copy-right li{
+	margin:0 5%;
+}
+
+.copy-right span{
+	float: right;
+	text-transform: capitalize;
 }
