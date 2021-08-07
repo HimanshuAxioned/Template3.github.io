@@ -60,6 +60,7 @@ a{
 
 h2{
 	text-transform: uppercase;
+	font-size: 2em;
 }
 
 
@@ -154,6 +155,7 @@ nav a{
 	display: inline-block;
 	width: 100%;
 	font-size: 1.5em;
+	color: white;
 }
 
 .banner .left-arrow-scroll{
