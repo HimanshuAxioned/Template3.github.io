@@ -270,3 +270,22 @@ nav a{
 	clear: both;
 }
 
+/*section advertisers*/
+
+
+.advertisers ul{ 
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.advertisers-content{
+	position: relative;
+}
+
+
+.advertisers-content + a{
+	position: absolute;
+	bottom:1%;
+	right:2px;
+}
