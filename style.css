@@ -47,10 +47,52 @@ table {
 	border-spacing: 0;
 }
 
+/*link */
 
 
+/*wrapper*/
 .wrapper{
   width: calc(100% - 43.5%);
   margin: 0 auto;
 
+}
+
+
+
+/*header*/
+
+header{
+	background-image: url(https://via.placeholder.com/);
+}
+
+
+header div{
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+	padding: 30px 0;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	
+}
+
+nav ul{
+	display: flex;
+}
+
+nav li{
+padding-left: 30px;
+}
+
+.nav-list li:last-child{
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+
+.nav-list li:last-child::after{
+	font-family: "Font Awesome 4 Free";
+  content:"" ;
 }
