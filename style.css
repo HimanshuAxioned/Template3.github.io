@@ -56,6 +56,7 @@ html{
 
 a{
 	text-decoration: none;
+	text-transform: capitalize;
 }
 
 /*Headings*/
@@ -89,8 +90,12 @@ h3::after{
 
 h4{
 	text-transform: uppercase;
-	font-size: 1.1em;
+	font-size: 1em;
 	padding: 5px;
+}
+
+p{
+	font-size: 0.7em;
 }
 
 p::first-letter{
@@ -170,27 +175,26 @@ nav a{
 }
 
 .banner-slidder{
-	width: 200%;
-}
-.banner ul{
-	width:100%;
+	box-sizing: border-box;
+	width: 100%;
+	padding-top: 9%;
+	padding-bottom: 25%;
 	display: flex;
 	position: relative;
-	animation: banner-slider 3s infinite ease-in-out ;
 }
 
-.banner li{
-	box-sizing: border-box;
-	margin: 7% 0%;
-	padding-left: 25%;
+.banner-slidder li{
+	background-image: url(https://via.placeholder.com/100x100) no-repeat fill;
+	position: absolute;
+	width: 100%;
 	text-align: center;
 }
 
 .banner h2{
-	display: inline-block;
-	width: 100%;
+	width: 50%;
 	font-size: 1.5em;
 	color: white;
+	float: right;
 }
 
 .banner .left-arrow-scroll{
@@ -204,19 +208,6 @@ nav a{
 	right: 5%;
 }
 
-
-
-@keyframes banner-slider{
-	0%{
-		transition: translateX(0%);
-	}
-	50%{
-		transition: translateX(-100%)
-	}
-	100%{
-		transition: translateX(0%)
-	}	
-}
 
 /*section business-theme*/
 
@@ -268,28 +259,52 @@ nav a{
 	content: none;
 }
 
+.business-theme p{
+	font-size: 100%;
+}
+
 /*section portfolio*/
 
 .portfolio{
 	background: whitesmoke;
 }
 
+
+
 .portfolio ul{
 	display: flex;
 	width: 100%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 
 }
 
-.portfolio li{
+.portfolio-content li{
+	margin: 1%;
+	width: 47%;
 	display: flex;
-	width: 50%;
-	justify-content: space-between;
-	float: left;
+	border: 1px solid lightgray;
 }
 
-.portfolio ul:nth-child(3){
-	clear: both;
+
+.portfolio-content div{
+	box-sizing: border-box;
+	padding: 0 2%;
 }
+
+.portfolio a{
+	font-size: 0.8em;
+	width: 45%;
+	color: white;
+	padding: 2px 8% ;
+	background-color:rgb(160, 198, 63);
+}
+
+.portfolio p{
+	padding: 5% 0;
+}
+
+
 
 /*section advertisers*/
 
@@ -298,16 +313,24 @@ nav a{
 }
 .advertisers ul{ 
 	width: 100%;
-	display: inline-flex;
-	justify-content: center;
+	display: flex;
+	
+}
+.advertisers li{
+ width: calc(100%/6);
+}
+
+.advertisers img{
+	width: 100%;
 }
 
 .advertisers-content{
 	position: relative;
+	padding-bottom: 5%;
 }
 
 
-.advertisers-content + a{
+.advertisers-content > a{
 	position: absolute;
 	bottom:1%;
 	right:2px;
@@ -328,6 +351,7 @@ footer{
 .contact-content div{
 	width: 25%;
 	box-sizing: border-box;
+	padding: 1%;
 
 }
 
@@ -338,6 +362,7 @@ footer{
 .archives li{
 	position: relative;
 	padding: 5%;
+	font-size: 0.7em;
 }
 .archives li::after{
 	content:"------------------";
@@ -350,8 +375,10 @@ footer{
 
 
 .contact-us a{
+	display: block;
 	color: black;
 	padding: 5% 0;
+	font-size: 0.7em;
 }
 
 .contact-form input{
@@ -376,11 +403,14 @@ button{
 .copy-right{
 	color: white;
 	background: black;
-	padding: 1% 0;
+	padding: .5% 0;
+	font-size: 0.7em;
 }
 
 .copy-right a{
 	color: white;
+	text-transform: uppercase;
+	
 }
 
 .copy-right ul{
@@ -395,3 +425,4 @@ button{
 	float: right;
 	text-transform: capitalize;
 }
+
