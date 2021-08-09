@@ -59,6 +59,10 @@ a{
 	text-transform: capitalize;
 }
 
+a:hover{
+	color: rgb(160, 198, 63) ;
+}
+
 /*Headings*/
 
 h2{
