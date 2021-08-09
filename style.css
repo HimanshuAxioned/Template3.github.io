@@ -69,7 +69,7 @@ h2{
 h3{
 	text-transform: uppercase;
 	font-size: 1.3em;
-	padding: 25px 0;
+	padding: 5% 0;
 }
 
 h3 span{
@@ -91,7 +91,7 @@ h3::after{
 h4{
 	text-transform: uppercase;
 	font-size: 1em;
-	padding: 5px;
+	padding: 5% 0;
 }
 
 p{
@@ -104,6 +104,15 @@ p::first-letter{
 
 li::first-letter{
 	text-transform: uppercase;
+}
+
+/*icon*/
+.icon::before{
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
 }
 
 /*wrapper*/
@@ -152,14 +161,25 @@ padding-left: 30px;
 }
 
 .nav-list li:last-child::after{
-	font-family: "Font Awesome 4 Free";
-  content: url(https://fontawesome.com/v4.7/icon/bookmark-o);
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+  content: "\f02e";
+	background-color:  rgb(160, 198, 63);
 }
 
 nav a{
 	color: black;
 	text-transform: uppercase;
 	font-size: 0.7rem;
+}
+
+
+
+.burger{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	display: none;
 }
 
 /*banner*/
@@ -340,19 +360,16 @@ nav a{
 
 footer{
 	background: white ;
-	margin-top: 3%;
 }
 
 .contact-content{
 	display: flex;
+	margin: 3% 0;
 	justify-content: space-between;
 }
 
 .contact-content div{
-	width: 25%;
-	box-sizing: border-box;
-	padding: 1%;
-
+	width: 24%;
 }
 
 .social-icons{
@@ -387,13 +404,16 @@ footer{
 	border-bottom: 2px solid lightgray;
 }
 
-::-webkit-input-placeholder::first-letter{
-	text-transform: uppercase;
+::-webkit-input-placeholder{
+	text-transform: capitalize;
+	font-size: 0.7em;
 }
 
 button{
-	margin: 5%;
+	text-transform: uppercase;
+	font-size: 0.7em;
 	border: 2px;
+	margin: 5%;
 	padding: 5% 8%;
 	color: white;
 	background:rgb(160, 198, 63) ;
@@ -426,3 +446,109 @@ button{
 	text-transform: capitalize;
 }
 
+/* media querry*/
+
+@media screen and (max-width: 1440px){
+	html{
+		font-size:90%; 
+	}
+}
+
+@media screen and (max-width: 1360px){
+	html{
+		font-size:80%;
+	}
+}
+
+@media screen and (max-width: 1280px){
+	html{
+		font-size:70%;
+	}
+}
+
+@media screen and (max-width: 940px){
+	html{
+		font-size:60%;
+	}
+
+		/* section portfolio*/
+		.portfolio-content li{
+			flex-direction: column;
+		}
+ 
+		.portfolio-content img{
+			width: 100%;
+		}
+
+		/*input in contact*/
+		input{
+			width: 100%;
+		}
+}
+
+@media screen and (max-width: 720px){
+	html{
+		font-size:50%;
+	}
+
+	
+}
+
+@media screen and (max-width: 540px){
+	html{
+		font-size: 40%;
+	}
+
+	.header-content {
+		flex-direction: column;
+	}
+
+	.nav-list{
+		display: none;
+		flex-direction: column;
+		
+	}
+
+	.nav-list li{
+		padding: 30% 0;
+	}
+
+	.nav-list li:last-child{
+		padding: 0 0;
+	}
+	
+	.burger{
+		display: block;
+	}
+
+	/* section portfolio*/
+	.portfolio-content li{
+		width: 100%;
+	}
+
+	/*contact*/
+
+	.contact-content{
+		flex-direction: column;
+	}
+
+	.contact-content div{
+		text-align: center;
+		width: 100%;
+		font-size: initial;
+		padding: 5% 0;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+	html{
+		font-size:30%
+	}
+}
+
+@media screen and (max-width: 320px){
+	html{
+		font-size:20%;
+	}
+}
